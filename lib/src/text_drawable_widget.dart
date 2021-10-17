@@ -8,6 +8,7 @@ import 'package:flutter_text_drawable/src/contrast_helper.dart';
 class TextDrawable extends StatefulWidget {
   /// The text supplied. Only first character will be displayed.
   // final String text;
+  //final String avatarUrl;
 
   /// Height of the [TextDrawable] widget.
   final double height;
@@ -130,9 +131,9 @@ class _TextDrawableState extends State<TextDrawable> {
                 Icons.check,
                 color: Colors.white,
               )
-            : Icon(
-                Icons.check,
-                color: Colors.black,
+            : CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage("url"),
               )
         /*Text(
               widget.text[0].toUpperCase(),
