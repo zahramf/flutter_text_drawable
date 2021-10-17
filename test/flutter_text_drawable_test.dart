@@ -12,6 +12,7 @@ void main() {
       MaterialApp(
         home: Scaffold(
           body: TextDrawable(
+            avatarUrl: "",
             //text: text,
             isTappable: true,
           ),

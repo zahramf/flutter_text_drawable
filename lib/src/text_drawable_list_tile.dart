@@ -29,7 +29,7 @@ class TextDrawableListTile extends StatefulWidget {
   /// Must be a [String].
   // final String drawableText;
 
-  final InkWell drawableAvatar;
+  final String drawableAvatar;
 
   /// The primary content of the list tile.
   ///
@@ -116,6 +116,7 @@ class _TextDrawableListTileState extends State<TextDrawableListTile> {
 
   Widget createLeading(bool sel) {
     return TextDrawable(
+      avatarUrl: "",
       // text: widget.drawableText[0],
       isSelected: sel,
     );
@@ -130,6 +131,7 @@ class _TextDrawableListTileState extends State<TextDrawableListTile> {
       isThreeLine: widget.isThreeLine,
       key: widget.key,
       leading: TextDrawable(
+        avatarUrl: "",
         // text: widget.drawableText[0],
         isSelected: widget.selected || isSelected,
         isTappable: true,

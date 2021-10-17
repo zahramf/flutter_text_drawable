@@ -20,19 +20,20 @@ class MyApp extends StatelessWidget {
       body: Column(
         children: [
           // Using TextDrawable alone
-          /* ListView.builder(
+          ListView.builder(
             shrinkWrap: true,
             itemCount: 3,
             itemBuilder: (context, index) {
               return ListTile(
                 leading: TextDrawable(
+                  avatarUrl: "",
                   //text: "$index",
                   isTappable: true,
                 ),
                 title: Text("Standalone Item $index"),
               );
             },
-          ),*/
+          ),
           SizedBox(height: 50),
           // Using the TextDrawableListTile widget
           ListView.builder(
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
             itemBuilder: (context, index) {
               return TextDrawableListTile(
                 // drawableText: "$index",k
-                drawableAvatar: InkWell(),
+                drawableAvatar: "InkWell()",
                 title: Text("TextDrawableListTile Item $index"),
                 onTap: null,
               );
