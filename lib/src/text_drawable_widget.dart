@@ -8,7 +8,7 @@ import 'package:flutter_text_drawable/src/contrast_helper.dart';
 class TextDrawable extends StatefulWidget {
   /// The text supplied. Only first character will be displayed.
   //final String text;
-  final Widget avatar;
+  final NetworkImage avatar;
 
   /// Height of the [TextDrawable] widget.
   final double height;
