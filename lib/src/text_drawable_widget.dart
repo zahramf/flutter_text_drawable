@@ -7,7 +7,7 @@ import 'package:flutter_text_drawable/src/contrast_helper.dart';
 // ignore: must_be_immutable
 class TextDrawable extends StatefulWidget {
   /// The text supplied. Only first character will be displayed.
-  final String text;
+  //final String text;
   final Widget avatar;
 
   /// Height of the [TextDrawable] widget.
@@ -48,7 +48,7 @@ class TextDrawable extends StatefulWidget {
   /// Creates a customizable [TextDrawable] widget.
   TextDrawable({
     Key? key,
-    required this.text,
+    //required this.text,
     required this.avatar,
     this.height = 48,
     this.width = 48,

@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             itemBuilder: (context, index) {
               return ListTile(
                 leading: TextDrawable(
-                  text: "$index",
+                  // text: "$index",
                   isTappable: true,
                   avatar: CircleAvatar(
                     radius: 30,
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
             itemCount: 3,
             itemBuilder: (context, index) {
               return TextDrawableListTile(
-                drawableText: "$index",
+                // drawableText: "$index",
                 avatar: CircleAvatar(
                   radius: 30,
                 ),
