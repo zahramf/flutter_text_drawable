@@ -26,8 +26,8 @@ class MyApp extends StatelessWidget {
             itemBuilder: (context, index) {
               return ListTile(
                 leading: TextDrawable(
-                  avatarUrl: "",
-                  //text: "$index",
+                  //  avatarUrl: "",
+                  text: "$index",
                   isTappable: true,
                 ),
                 title: Text("Standalone Item $index"),
@@ -36,18 +36,18 @@ class MyApp extends StatelessWidget {
           ),
           SizedBox(height: 50),
           // Using the TextDrawableListTile widget
-          ListView.builder(
+          /*   ListView.builder(
             shrinkWrap: true,
             itemCount: 3,
             itemBuilder: (context, index) {
               return TextDrawableListTile(
                 // drawableText: "$index",k
-                drawableAvatar: "InkWell()",
+                drawableAvatar: "",
                 title: Text("TextDrawableListTile Item $index"),
                 onTap: null,
               );
             },
-          ),
+          ),*/
         ],
       ),
     );
