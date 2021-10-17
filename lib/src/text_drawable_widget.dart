@@ -7,7 +7,7 @@ import 'package:flutter_text_drawable/src/contrast_helper.dart';
 // ignore: must_be_immutable
 class TextDrawable extends StatefulWidget {
   /// The text supplied. Only first character will be displayed.
-  final String text;
+  //final String text;
   //final String avatarUrl;
 
   /// Height of the [TextDrawable] widget.
@@ -48,7 +48,7 @@ class TextDrawable extends StatefulWidget {
   /// Creates a customizable [TextDrawable] widget.
   TextDrawable({
     Key? key,
-    required this.text,
+    //required this.text,
     this.height = 48,
     this.width = 48,
     this.textStyle,
@@ -118,24 +118,21 @@ class _TextDrawableState extends State<TextDrawable> {
 
   Widget _getSide(double contrast) {
     return Container(
-      alignment: Alignment.center,
-      height: widget.height,
-      width: widget.width,
-      decoration: BoxDecoration(
-        color: !widget.isSelected ? backgroundColor : Colors.lightBlue,
-        shape: widget.boxShape,
-        borderRadius: widget.borderRadius,
-      ),
-      child: widget.isSelected
-          ? Icon(
-              Icons.check,
-              color: Colors.white,
-            )
-          : /*Icon(
+        alignment: Alignment.center,
+        height: widget.height,
+        width: widget.width,
+        decoration: BoxDecoration(
+          color: !widget.isSelected ? backgroundColor : Colors.lightBlue,
+          shape: widget.boxShape,
+          borderRadius: widget.borderRadius,
+        ),
+        child: widget.isSelected
+            ? Icon(
                 Icons.check,
                 color: Colors.white,
-              )*/
-          Text(
+              )
+            : Icon(Icons.check, color: Colors.yellow)
+        /*Text(
               widget.text[0].toUpperCase(),
               style: widget.textStyle?.copyWith(
                     color: contrast > 1.8 ? Colors.white : Colors.black,
@@ -144,8 +141,8 @@ class _TextDrawableState extends State<TextDrawable> {
                     fontSize: 18,
                     color: contrast > 1.8 ? Colors.white : Colors.black,
                   ),
-            ),
-    );
+            ),*/
+        );
   }
 }
 

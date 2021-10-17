@@ -12,7 +12,7 @@ void main() {
       MaterialApp(
         home: Scaffold(
           body: TextDrawable(
-            text: text,
+            //text: text,
             isTappable: true,
           ),
         ),
