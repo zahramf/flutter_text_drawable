@@ -131,8 +131,9 @@ class _TextDrawableState extends State<TextDrawable> {
                 Icons.check,
                 color: Colors.white,
               )
-            : CircleAvatar(
-                backgroundImage: NetworkImage('assets/images/no-user.png'),
+            : Icon(
+                Icons.call,
+                color: Colors.white,
               )
         /*Text(
               widget.text[0].toUpperCase(),
