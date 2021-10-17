@@ -14,6 +14,9 @@ void main() {
           body: TextDrawable(
             text: text,
             isTappable: true,
+            avatar: CircleAvatar(
+              radius: 30,
+            ),
           ),
         ),
       ),

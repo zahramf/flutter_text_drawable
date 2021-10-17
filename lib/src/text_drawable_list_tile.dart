@@ -8,6 +8,7 @@ class TextDrawableListTile extends StatefulWidget {
   const TextDrawableListTile({
     Key? key,
     required this.drawableText,
+    required this.avatar,
     required this.title,
     this.subtitle,
     this.trailing,
@@ -34,6 +35,8 @@ class TextDrawableListTile extends StatefulWidget {
   ///
   /// This should not wrap.
   final Widget title;
+
+  final Widget avatar;
 
   /// Additional content displayed below the title.
   ///
@@ -115,6 +118,7 @@ class _TextDrawableListTileState extends State<TextDrawableListTile> {
     return TextDrawable(
       text: widget.drawableText[0],
       isSelected: sel,
+      avatar: widget.avatar,
     );
   }
 
@@ -130,6 +134,7 @@ class _TextDrawableListTileState extends State<TextDrawableListTile> {
         text: widget.drawableText[0],
         isSelected: widget.selected || isSelected,
         isTappable: true,
+        avatar: widget.avatar,
       ),
       onLongPress: () {
         if (widget.enabled) {

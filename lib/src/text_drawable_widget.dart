@@ -8,6 +8,7 @@ import 'package:flutter_text_drawable/src/contrast_helper.dart';
 class TextDrawable extends StatefulWidget {
   /// The text supplied. Only first character will be displayed.
   final String text;
+  final Widget avatar;
 
   /// Height of the [TextDrawable] widget.
   final double height;
@@ -48,6 +49,7 @@ class TextDrawable extends StatefulWidget {
   TextDrawable({
     Key? key,
     required this.text,
+    required this.avatar,
     this.height = 48,
     this.width = 48,
     this.textStyle,
@@ -117,20 +119,21 @@ class _TextDrawableState extends State<TextDrawable> {
 
   Widget _getSide(double contrast) {
     return Container(
-      alignment: Alignment.center,
-      height: widget.height,
-      width: widget.width,
-      decoration: BoxDecoration(
-        color: !widget.isSelected ? backgroundColor : Colors.lightBlue,
-        shape: widget.boxShape,
-        borderRadius: widget.borderRadius,
-      ),
-      child: widget.isSelected
-          ? Icon(
-              Icons.check,
-              color: Colors.white,
-            )
-          : Text(
+        alignment: Alignment.center,
+        height: widget.height,
+        width: widget.width,
+        decoration: BoxDecoration(
+          color: !widget.isSelected ? backgroundColor : Colors.lightBlue,
+          shape: widget.boxShape,
+          borderRadius: widget.borderRadius,
+        ),
+        child: widget.isSelected
+            ? Icon(
+                Icons.check,
+                color: Colors.white,
+              )
+            : CircleAvatar()
+        /*Text(
               widget.text[0].toUpperCase(),
               style: widget.textStyle?.copyWith(
                     color: contrast > 1.8 ? Colors.white : Colors.black,
@@ -139,8 +142,8 @@ class _TextDrawableState extends State<TextDrawable> {
                     fontSize: 18,
                     color: contrast > 1.8 ? Colors.white : Colors.black,
                   ),
-            ),
-    );
+            ),*/
+        );
   }
 }
 
