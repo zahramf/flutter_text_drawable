@@ -36,7 +36,7 @@ class TextDrawableListTile extends StatefulWidget {
   /// This should not wrap.
   final Widget title;
 
-  final Widget avatar;
+  final CircleAvatar avatar;
 
   /// Additional content displayed below the title.
   ///
