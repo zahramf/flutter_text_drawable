@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
             itemBuilder: (context, index) {
               return ListTile(
                 leading: TextDrawable(
-                    // text: "$index",
-                    isTappable: true,
-                    avatar: NetworkImage("url")),
+                  //  text: "$index",
+                  isTappable: true,
+                ),
                 title: Text("Standalone Item $index"),
               );
             },
@@ -40,8 +40,7 @@ class MyApp extends StatelessWidget {
             itemCount: 3,
             itemBuilder: (context, index) {
               return TextDrawableListTile(
-                // drawableText: "$index",
-                avatar: NetworkImage(""),
+                //  drawableText: "$index",
                 title: Text("TextDrawableListTile Item $index"),
                 onTap: null,
               );

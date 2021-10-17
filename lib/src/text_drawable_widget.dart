@@ -7,8 +7,7 @@ import 'package:flutter_text_drawable/src/contrast_helper.dart';
 // ignore: must_be_immutable
 class TextDrawable extends StatefulWidget {
   /// The text supplied. Only first character will be displayed.
-  //final String text;
-  final NetworkImage avatar;
+  // final String text;
 
   /// Height of the [TextDrawable] widget.
   final double height;
@@ -49,7 +48,6 @@ class TextDrawable extends StatefulWidget {
   TextDrawable({
     Key? key,
     //required this.text,
-    required this.avatar,
     this.height = 48,
     this.width = 48,
     this.textStyle,
@@ -132,7 +130,10 @@ class _TextDrawableState extends State<TextDrawable> {
                 Icons.check,
                 color: Colors.white,
               )
-            : CircleAvatar()
+            : Icon(
+                Icons.check,
+                color: Colors.black,
+              )
         /*Text(
               widget.text[0].toUpperCase(),
               style: widget.textStyle?.copyWith(

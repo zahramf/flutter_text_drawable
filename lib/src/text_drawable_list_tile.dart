@@ -7,8 +7,7 @@ class TextDrawableListTile extends StatefulWidget {
   /// the leading [TextDrawable] widget.
   const TextDrawableListTile({
     Key? key,
-    //this.drawableText,
-    required this.avatar,
+    // required this.drawableText,
     required this.title,
     this.subtitle,
     this.trailing,
@@ -20,14 +19,14 @@ class TextDrawableListTile extends StatefulWidget {
     this.onLongPress,
     this.selected = false,
   })  : assert(!isThreeLine || subtitle != null),
-        //assert(drawableText is String),
+        // assert(drawableText is String),
         super(key: key);
 
   /// The string you wish to display in the leading [TextDrawable].
   /// Only the first character is displayed.
   ///
   /// Must be a [String].
-  //final String drawableText;
+  // final String drawableText;
 
   /// The primary content of the list tile.
   ///
@@ -35,8 +34,6 @@ class TextDrawableListTile extends StatefulWidget {
   ///
   /// This should not wrap.
   final Widget title;
-
-  final NetworkImage avatar;
 
   /// Additional content displayed below the title.
   ///
@@ -118,7 +115,6 @@ class _TextDrawableListTileState extends State<TextDrawableListTile> {
     return TextDrawable(
       // text: widget.drawableText[0],
       isSelected: sel,
-      avatar: widget.avatar,
     );
   }
 
@@ -134,7 +130,6 @@ class _TextDrawableListTileState extends State<TextDrawableListTile> {
         // text: widget.drawableText[0],
         isSelected: widget.selected || isSelected,
         isTappable: true,
-        avatar: widget.avatar,
       ),
       onLongPress: () {
         if (widget.enabled) {

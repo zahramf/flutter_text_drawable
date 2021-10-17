@@ -12,9 +12,9 @@ void main() {
       MaterialApp(
         home: Scaffold(
           body: TextDrawable(
-              // text: text,
-              isTappable: true,
-              avatar: NetworkImage("url")),
+            // text: text,
+            isTappable: true,
+          ),
         ),
       ),
     );
