@@ -8,6 +8,7 @@ class TextDrawableListTile extends StatefulWidget {
   const TextDrawableListTile({
     Key? key,
     // required this.drawableText,
+    required this.drawableAvatar,
     required this.title,
     this.subtitle,
     this.trailing,
@@ -27,6 +28,8 @@ class TextDrawableListTile extends StatefulWidget {
   ///
   /// Must be a [String].
   // final String drawableText;
+
+  final InkWell drawableAvatar;
 
   /// The primary content of the list tile.
   ///
