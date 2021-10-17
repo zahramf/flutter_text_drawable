@@ -133,7 +133,7 @@ class _TextDrawableState extends State<TextDrawable> {
               )
             : Icon(
                 Icons.check,
-                color: Colors.red,
+                color: Colors.white,
               )
         /*Text(
               widget.text[0].toUpperCase(),
