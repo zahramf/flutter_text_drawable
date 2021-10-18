@@ -42,25 +42,27 @@ class TextDrawable extends StatefulWidget {
   /// Callback received when widget is tapped.
   /// It emits its current selected status.
   final Function(bool)? onTap;
+  final Function(bool)? onLongPress;
 
   bool isSelected;
 
   /// Creates a customizable [TextDrawable] widget.
-  TextDrawable({
-    Key? key,
-    this.text = "",
-    this.height = 48,
-    this.width = 48,
-    this.textStyle,
-    this.avatarUrl = "",
-    this.backgroundColor,
-    this.boxShape = BoxShape.circle,
-    this.borderRadius,
-    this.duration = const Duration(milliseconds: 500),
-    this.isTappable = false,
-    this.isSelected = false,
-    this.onTap,
-  }) : super(key: key) {
+  TextDrawable(
+      {Key? key,
+      this.text = "",
+      this.height = 48,
+      this.width = 48,
+      this.textStyle,
+      this.avatarUrl = "",
+      this.backgroundColor,
+      this.boxShape = BoxShape.circle,
+      this.borderRadius,
+      this.duration = const Duration(milliseconds: 500),
+      this.isTappable = false,
+      this.isSelected = false,
+      this.onTap,
+      this.onLongPress})
+      : super(key: key) {
     assert(
       boxShape == BoxShape.rectangle || borderRadius == null,
       "Set boxShape = BoxShape.rectangle when borderRadius is specified",
@@ -68,6 +70,10 @@ class TextDrawable extends StatefulWidget {
     assert(
       onTap == null || isTappable,
       "isTappable must be true to receive onTapped callback",
+    );
+    assert(
+      onLongPress == null || isTappable,
+      "isTappable must be true to receive onLongPress callback",
     );
   }
 
@@ -106,6 +112,16 @@ class _TextDrawableState extends State<TextDrawable> {
 
           if (widget.isTappable && widget.onTap != null)
             widget.onTap!(widget.isSelected);
+        }
+      },
+      onLongPress: () {
+        if (widget.isTappable) {
+          setState(() {
+            widget.isSelected = !widget.isSelected;
+          });
+
+          if (widget.isTappable && widget.onLongPress != null)
+            widget.onLongPress!(widget.isSelected);
         }
       },
       child: _Flippy(
