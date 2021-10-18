@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
                   //  avatarUrl: "",
                   text: "$index",
                   isTappable: true,
+                  onTap: null,
                 ),
                 title: Text("Standalone Item $index"),
               );

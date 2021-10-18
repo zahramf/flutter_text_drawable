@@ -104,7 +104,7 @@ class _TextDrawableState extends State<TextDrawable> {
     ] /** white text */);
 
     return GestureDetector(
-      onTap: () {
+      /*  onTap: () {
         if (widget.isTappable) {
           setState(() {
             widget.isSelected = !widget.isSelected;
@@ -113,7 +113,7 @@ class _TextDrawableState extends State<TextDrawable> {
           if (widget.isTappable && widget.onTap != null)
             widget.onTap!(widget.isSelected);
         }
-      },
+      },*/
       onLongPress: () {
         if (widget.isTappable) {
           setState(() {
